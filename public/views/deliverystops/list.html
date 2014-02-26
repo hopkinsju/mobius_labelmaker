@@ -11,7 +11,7 @@
 				<th>Remove</th>
 			</tr>
 		</thead>
-		<tr data-ng-repeat="deliverystop in deliverystops | filter:searchText">
+		<tr class="animate-repeat" data-ng-repeat="deliverystop in deliverystops | filter:searchText">
 			<td><input type="checkbox" unchecked name="selected-from[]" value="{{ deliverystop._id }}" placeholder="" data-ng-checked="selectAll"></td>
 			<td>{{ deliverystop.loc_code }}</td>
 			<td><a href="/#!/deliverystops/{{deliverystop._id}}">{{ deliverystop.lib_name }}</a></td>
