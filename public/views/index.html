@@ -1,3 +1,6 @@
 <section data-ng-controller="IndexController">
 	<h1>This is the home view</h1>
+	<label for="testInput" class="label-">Display this text below:</label>
+	<input id="testInput" name="testInput" ng-model="data.message" type="text" />
+	<p>{{ data.message }}</p>
 </section>

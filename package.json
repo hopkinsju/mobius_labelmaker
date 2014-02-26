@@ -1,12 +1,12 @@
 {
-  "name": "mean",
-  "description": "MEAN - A Modern Stack: MongoDB, ExpressJS, AngularJS, NodeJS. (BONUS: Passport User Support).",
+  "name": "labelmaker",
+  "description": "MOBIUS Label Maker - One Label Maker to Rule Them All",
   "version": "0.1.2",
   "private": false,
-  "author": "Amos Haviv",
+  "author": "Justin Hopkins, MOBIUS",
   "repository": {
     "type": "git",
-    "url": "https://github.com/linnovate/mean.git"
+    "url": "https://github.com/hopkinsju/labelmaker.git"
   },
   "engines": {
     "node": "0.10.x",

@@ -1,9 +1,9 @@
 'use strict';
 
 module.exports = {
-    db: 'mongodb://localhost/mean',
+    db: 'mongodb://localhost/labelmaker',
     app: {
-        name: 'MEAN - A Modern Stack - Production'
+        name: 'MOBIUS Label Maker - Production'
     },
     facebook: {
         clientID: 'APP_ID',
