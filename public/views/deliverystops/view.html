@@ -1,0 +1,14 @@
+<section data-ng-controller="DeliveryStopsController" data-ng-init="findOne()">
+    <span>{{deliverystop.created | date:'medium'}}</span> /
+    <span>{{deliverystop.user.name}}</span>
+    <h2>{{deliverystop.loc_code}}</h2>
+    <div data-ng-show="global.user._id == deliverystop.user._id">
+        <a class="btn" href="/#!/deliverystops/{{deliverystop._id}}/edit">
+        	<i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn" data-ng-click="remove();">
+            <i class="glyphicon glyphicon-trash"></i>
+        </a>
+    </div>
+    <div>{{deliverystop.lib_name}}</div>
+</section>
