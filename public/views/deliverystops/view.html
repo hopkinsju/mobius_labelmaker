@@ -1,14 +1,19 @@
 <section data-ng-controller="DeliveryStopsController" data-ng-init="findOne()">
-    <span>{{deliverystop.created | date:'medium'}}</span> /
-    <span>{{deliverystop.user.name}}</span>
-    <h2>{{deliverystop.loc_code}}</h2>
+    <h2>{{deliverystop.lib_name}}</h2>
+    <div>Institution: {{deliverystop.inst_name}}</div>
+    <div>Location code: {{deliverystop.loc_code}}</div>
+    <div>Street: {{deliverystop.street}}</div>
+    <div>City: {{deliverystop.city}}</div>
+    <div>State: {{deliverystop.state}}</div>
+    <div>ZIP: {{deliverystop.zip}}</div>
+    <div>Sort Code: {{deliverystop.sort_code}}</div>
+    <div>Courier: {{deliverystop.courier}}</div>
     <div data-ng-show="global.user._id == deliverystop.user._id">
-        <a class="btn" href="/#!/deliverystops/{{deliverystop._id}}/edit">
-        	<i class="glyphicon glyphicon-edit"></i>
+        <a class="btn btn-success" href="/#!/deliverystops/{{deliverystop._id}}/edit" title="edit entry">
+            Edit
         </a>
-        <a class="btn" data-ng-click="remove();">
-            <i class="glyphicon glyphicon-trash"></i>
+        <a class="btn btn-danger" data-ng-click="remove();">
+            Delete
         </a>
     </div>
-    <div>{{deliverystop.lib_name}}</div>
 </section>

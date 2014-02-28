@@ -1,21 +1,63 @@
 <section data-ng-controller="DeliveryStopsController">
-	<form class="form-horizontal col-md-6" role="form" data-ng-submit="create()">
-		<div class="form-group">
-			<label for="loc_code" class="col-md-2 control-label">Location Code</label>
-			<div class="col-md-10">
-				<input type="text" class="form-control" data-ng-model="loc_code" id="loc_code" placeholder="Location Code" required>
-			</div>
-		</div>
-		<div class="form-group">
-			<label for="lib_name" class="col-md-2 control-label">Library Name</label>
-			<div class="col-md-10">
-				<input type="text" data-ng-model="lib_name" id="lib_name" cols="30" rows="10" placeholder="Library Name" class="form-control" required>
-			</div>
-		</div>
-		<div class="form-group">
-			<div class="col-md-offset-2 col-md-10">
-				<button type="submit" class="btn btn-default">Submit</button>
-			</div>
-		</div>
-	</form>
+    <form class="form-horizontal col-md-6" role="form" data-ng-submit="create()">
+        <div class="form-group">
+            <label for="loc_code" class="col-md-4 control-label">Location Code</label>
+            <div class="col-md-8">
+                <input type="text" class="form-control" data-ng-model="loc_code" id="loc_code" placeholder="Location Code" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lib_name" class="col-md-4 control-label">Institution Name</label>
+            <div class="col-md-8">
+                <input type="text" data-ng-model="inst_name" id="inst_name" placeholder="Institution Name" class="form-control" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lib_name" class="col-md-4 control-label">Library Name</label>
+            <div class="col-md-8">
+                <input type="text" data-ng-model="lib_name" id="lib_name" placeholder="Library Name" class="form-control" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lib_name" class="col-md-4 control-label">Street Address</label>
+            <div class="col-md-8">
+                <input type="text" data-ng-model="street" id="street" placeholder="Street Address" class="form-control" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lib_name" class="col-md-4 control-label">City</label>
+            <div class="col-md-8">
+                <input type="text" data-ng-model="city" id="city" placeholder="City" class="form-control" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lib_name" class="col-md-4 control-label">State</label>
+            <div class="col-md-8">
+                <input type="text" data-ng-model="state" id="state" placeholder="State (2 characters)" class="form-control" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lib_name" class="col-md-4 control-label">ZIP Code</label>
+            <div class="col-md-8">
+                <input type="text" data-ng-model="zip" id="zip" placeholder="ZIP" class="form-control" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lib_name" class="col-md-4 control-label">Sort Code</label>
+            <div class="col-md-8">
+                <input type="text" data-ng-model="sort_code" id="sort_code" placeholder="Sort Code (optional)" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lib_name" class="col-md-4 control-label">Courier</label>
+            <div class="col-md-8">
+                <input type="text" data-ng-model="courier" id="courier" placeholder="Courier Name" class="form-control" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-4 col-md-10">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </div>
+    </form>
 </section>

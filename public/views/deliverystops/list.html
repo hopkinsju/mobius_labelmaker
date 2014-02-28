@@ -1,25 +1,43 @@
 <section data-ng-controller="DeliveryStopsController" data-ng-init="find()">
-	<h1>Delivery Stops</h1>
-	<p>{{ deliverystops.length }} delivery stops. Care to filter by columns?</p>
-	<table class="table-striped table">
-		<thead>
-			<tr>
-				<th><input type="checkbox" data-ng-model="selectAll"></th>
-				<th><input type="search" data-ng-model="searchText.loc_code" class="searchText search-header" id="search-loc-code" placeholder="Location Code"></th>
-				<th><input type="search" data-ng-model="searchText.lib_name" class="searchText search-header" id="search-lib-name" placeholder="Library Name"></th>
-				<th>Edit</th>
-				<th>Remove</th>
-			</tr>
-		</thead>
-		<tr class="animate-repeat" data-ng-repeat="deliverystop in deliverystops | filter:searchText">
-			<td><input type="checkbox" unchecked name="selected-from[]" value="{{ deliverystop._id }}" placeholder="" data-ng-checked="selectAll"></td>
-			<td>{{ deliverystop.loc_code }}</td>
-			<td><a href="/#!/deliverystops/{{deliverystop._id}}">{{ deliverystop.lib_name }}</a></td>
-			<td><a class="btn" href="/#!/deliverystops/{{deliverystop._id}}/edit">
-        		<i class="glyphicon glyphicon-edit"></i></a></td>
-        	<td><a class="btn" data-ng-click="remove();">
-	            <i class="glyphicon glyphicon-trash"></i></a></td>
-		</tr>
-	</table>
-	<h1 data-ng-hide="!deliverystops || deliverystops.length">No deliverystops yet. <br> Why don't you <a href="/#!/deliverystops/create">Create One</a>?</h1>
+    <h1>Delivery Stops</h1>
+
+    <div data-ng-show="!deliverystops || deliverystops.length">
+        <a href="/#!/deliverystops/create" class="btn btn-success">
+            <i class="glyphicon glyphicon-plus"></i> Create New Stop</a>
+
+        <p>{{ deliverystops.length }} delivery stops. Care to filter by columns?</p>
+        <table class="table-striped table">
+            <thead>
+            <tr>
+                <th><input type="checkbox" data-ng-model="selectAll"></th>
+                <th><input type="search" data-ng-model="searchText.loc_code" class="searchText search-header"
+                           id="search-loc-code" placeholder="Location Code"></th>
+                <th><input type="search" data-ng-model="searchText.lib_name" class="searchText search-header"
+                           id="search-lib-name" placeholder="Library Name"></th>
+                <th><input type="search" data-ng-model="searchText.city" class="searchText search-header"
+                           id="search-city" placeholder="City"></th>
+                <th><input type="search" data-ng-model="searchText.state" class="searchText search-header"
+                           id="search-state" placeholder="State"></th>
+
+
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+            </thead>
+            <tr class="animate-repeat" data-ng-repeat="deliverystop in deliverystops | filter:searchText">
+                <td><input type="checkbox" unchecked name="selected-from[]" value="{{ deliverystop._id }}"
+                           placeholder="" data-ng-checked="selectAll"></td>
+                <td>{{ deliverystop.loc_code }}</td>
+                <td><a href="/#!/deliverystops/{{deliverystop._id}}">{{ deliverystop.lib_name }}</a></td>
+                <td>{{ deliverystop.city }}</td>
+                <td>{{ deliverystop.state }}</td>
+                <td><a class="btn" href="/#!/deliverystops/{{deliverystop._id}}/edit">
+                    <i class="glyphicon glyphicon-edit"></i></a></td>
+                <td><a class="btn" data-ng-click="remove(deliverystop);">
+                    <i class="glyphicon glyphicon-trash"></i></a></td>
+            </tr>
+        </table>
+    </div>
+    <h1 data-ng-hide="!deliverystops || deliverystops.length">No deliverystops yet. <br> Why don't you <a
+            href="/#!/deliverystops/create">Create One</a>?</h1>
 </section>

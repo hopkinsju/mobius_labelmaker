@@ -6,7 +6,14 @@ angular.module('mean.deliverystops').controller('DeliveryStopsController', ['$sc
     $scope.create = function() {
         var deliverystop = new DeliveryStops({
             loc_code: this.loc_code,
-            lib_name: this.lib_name
+            lib_name: this.lib_name,
+            inst_name: this.inst_name,
+            street: this.street,
+            city: this.city,
+            state: this.state,
+            zip: this.zip,
+            sort_code: this.sort_code,
+            courier: this.courier
         });
         deliverystop.$save(function(response) {
             $location.path('deliverystops/' + response._id);
